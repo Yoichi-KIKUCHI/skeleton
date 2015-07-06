@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SalesRepository">
+    <select id="findSummaryByYearMonthRange"
+            parameterType="com.yo1000.skeleton.domain.model.SearchCondition"
+            resultType="com.yo1000.skeleton.domain.model.SalesSummary">
+        SELECT
+            STR_ID          AS STORE_ID,
+            STR_NAME        AS STORE_NAME,
+            COUNT(SLS_ID)   AS SALES_COUNT,
+            SUM(SLS_SALES)  AS SALES_TOTAL,
+            AVG(CST_AGE)    AS AGE_AVERAGE
+        FROM
+          SALES
+        LEFT OUTER JOIN
+            STORE
+            ON SLS_STR_ID = STR_ID
+        LEFT OUTER JOIN
+            CUSTOMER
+            ON SLS_CST_ID = CST_ID
+        <where>
+            <if test="storeId != null">
+                AND SLS_STR_ID = #{storeId}
+            </if>
+            <if test="from != null or to != null">
+                AND
+                <choose>
+                    <when test="from != null and to != null">
+                        SLS_CREATED BETWEEN #{from} AND #{to}
+                    </when>
+                    <when test="from != null and to == null">
+                        SLS_CREATED &gt;= #{from}
+                    </when>
+                    <otherwise>
+                        SLS_CREATED &lt;= #{to}
+                    </otherwise>
+                </choose>
+            </if>
+            <if test="customerId != null">
+                AND SLS_CST_ID = #{customerId}
+            </if>
+        </where>
+        GROUP BY
+            STR_ID,
+            STR_NAME
+        ORDER BY
+          STR_ID
+    </select>
+</mapper>

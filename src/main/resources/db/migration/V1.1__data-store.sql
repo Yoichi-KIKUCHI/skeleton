@@ -1,0 +1,11 @@
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST1',	'魔界塔士',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST2',	'秘宝伝説',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST3',	'時空の覇者',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST4',	'悪霊の神々',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST5',	'そして伝説へ',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST6',	'導かれし者たち',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST7',	'天空の花嫁',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST8',	'幻の大地',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST9',	'エデンの戦士たち',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST10',	'空と海と大地と呪われし姫君',	'2015-04-01',	'2015-04-01'	);
+insert into PUBLIC.STORE (STR_ID, STR_NAME, STR_CREATED, STR_MODIFIED) values (	'ST11',	'星空の守り人',	'2015-04-01',	'2015-04-01'	);
